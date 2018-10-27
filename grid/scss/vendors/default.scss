@@ -1,0 +1,33 @@
+// import bootstrap scss on top of your default scss
+@import 'bootstrap/bootstrap';
+// your custom scss classes
+.box {
+     // extending bootstrap container
+     @include make-container();
+     // other custom properties ...
+     // add container wrapper 
+     &-stack {
+         // extending bootstrap row
+         @include make-row();
+         &-wide {
+            // extending default bootstrap column ready
+            @include make-col-ready();
+            background-color:$warning;
+            border:1px solid darken($warning,20%);
+            padding: 3rem;
+        }
+        &-fixed {
+            background-color:$warning;
+            border:1px solid darken($warning,20%);
+            padding: 3rem;
+            // on devices screen
+            @include media-breakpoint-up(sm) {
+                @include make-col(12);
+            }
+            // on desktop screen
+            @include media-breakpoint-up(lg) {
+                @include make-col(6);
+            }
+        }
+    }
+}
