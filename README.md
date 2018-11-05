@@ -1,4 +1,4 @@
-### SCSS for Boostrap Extend Grid System Library
+### SCSS for Bootstrap Extend Grid System Library
 Tools :
 
 * Visual Studio Code
